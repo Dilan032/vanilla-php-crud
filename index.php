@@ -3,45 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Server side database crud operation</title>
+    <title>Crud operation</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   </head>
   <body>
     <h1 class="text-center mt-5 mb-5">Database CRUD</h1>
     <div class="container-fluid">
         <div class="row">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th class="text-center">ID</th>
-                                    <th class="text-center">Name</th>
-                                    <th class="text-center">Email</th>
-                                    <th class="text-center">Phone</th>
-                                    <th class="text-center">Address</th>
-                                    <th class="text-center">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="text-center">1</td>
-                                    <td class="text-center">John Doe</td>
-                                    <td class="text-center">John@gmail.com</td>
-                                    <td class="text-center">1234567890</td>
-                                    <td class="text-center">123 Main St</td>
-                                    <td class="text-center">
-                                        <a href="#" class="btn btn-primary">Edit</a>
-                                        <a href="#" class="btn btn-danger">Delete</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="col-md-2"></div>
-                </div>
+            <div class="col-md-12">
+                
             </div>
         </div>
     </div>
