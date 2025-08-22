@@ -21,7 +21,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Studet add
+                        <h4>Student add
                             <a href="index.php" class="btn btn-danger float-end">Back</a>
                         </h4>
                     </div>

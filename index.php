@@ -1,3 +1,7 @@
+<?php
+  require 'db_connection.php';
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,10 +12,59 @@
   </head>
   <body>
     <h1 class="text-center mt-5 mb-5">vanilla-php-crud</h1>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-md-12">
-                
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Studet Details
+                            <a href="student_create.php" class="btn btn-primary float-end">Add student</a>
+                        </h4>
+                    </div>
+                    <div class="card-body table-responsive">
+                       <table class="table table-bordered table-striped">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>Student Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Coruse</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <?php 
+                                $query = "SELECT * FROM users";
+                                $query_run = mysqli_query($conn, $query);
+                                if (mysqli_num_rows($query_run) > 0) 
+                                  {
+                                    foreach ($query_run as $student) 
+                                    {
+                                      ?>
+                                      <tr style="vertical-align: middle;">
+                                        <td><?php echo $student['id']; ?></td>
+                                        <td><?php echo $student['name']; ?></td>
+                                        <td><?php echo $student['email']; ?></td>
+                                        <td><?php echo $student['phoneNumber']; ?></td>
+                                        <td><?php echo $student['course']; ?></td>
+                                        <td>
+                                          <div class="d-flex justify-content-center gap-2">
+                                            <a href="" class="btn btn-info btn-sm px-3">View</a>
+                                            <a href="" class="btn btn-success btn-sm px-3">Edit</a>
+                                            <a href="" class="btn btn-danger btn-sm">Delete</a>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <?php
+                                    }
+                                  } else {
+                                    echo "<h5> No Record Found </h5>";
+                                  }
+                              ?>
+                            </tbody>
+                       </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
