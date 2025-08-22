@@ -21,19 +21,19 @@
                         <form action="code.php" method="post">
                           <div class="mb-3">
                             <label for="name">Student Name</label>
-                            <input type="text" name="name" class="form-control">
+                            <input type="text" name="name" class="form-control" required>
                           </div>  
                           <div class="mb-3">
                             <label for="email">Student email</label>
-                            <input type="email" name="email" class="form-control">
+                            <input type="email" name="email" class="form-control" required>
                           </div>  
                           <div class="mb-3">
                             <label for="phoneNumber">Student phone Number</label>
-                            <input type="text" name="phoneNumber" class="form-control">
+                            <input type="tel" name="phoneNumber" maxlength="10" class="form-control" required>
                           </div>  
                           <div class="mb-3">
                             <label for="course">Student course</label>
-                            <input type="text" name="course" class="form-control">
+                            <input type="text" name="course" class="form-control" required>
                           </div>  
                           <div class="mb-3">
                             <button type="submit" name="save_student" class="btn btn-primary">Save Student</button>
