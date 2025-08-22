@@ -2,6 +2,7 @@
 require 'db_connection.php';
 
 if (isset($_POST['save_student'])) {
+    // Get form data
     $name = $_POST['name'];
     $email = $_POST['email'];
     $phoneNumber = $_POST['phoneNumber'];
