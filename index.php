@@ -18,7 +18,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h4>Studet Details
-                            <a href="student_create.php" class="btn btn-primary float-end">Add student</a>
+                            <a href="./pages/student-create.php" class="btn btn-primary float-end">Add student</a>
                         </h4>
                     </div>
                     <div class="card-body table-responsive">
@@ -42,15 +42,15 @@
                                     {
                                       ?>
                                       <tr style="vertical-align: middle;">
-                                        <td><?php echo $student['id']; ?></td>
-                                        <td><?php echo $student['name']; ?></td>
-                                        <td><?php echo $student['email']; ?></td>
-                                        <td><?php echo $student['phoneNumber']; ?></td>
-                                        <td><?php echo $student['course']; ?></td>
+                                        <td><?= $student['id']; ?></td>
+                                        <td><?= $student['name']; ?></td>
+                                        <td><?= $student['email']; ?></td>
+                                        <td><?= $student['phoneNumber']; ?></td>
+                                        <td><?= $student['course']; ?></td>
                                         <td>
                                           <div class="d-flex justify-content-center gap-2">
                                             <a href="" class="btn btn-info btn-sm px-3">View</a>
-                                            <a href="" class="btn btn-success btn-sm px-3">Edit</a>
+                                            <a href="./pages/student-edit.php?id=<?= $student['id']; ?>" class="btn btn-success btn-sm px-3">Edit</a>
                                             <a href="" class="btn btn-danger btn-sm">Delete</a>
                                           </div>
                                         </td>

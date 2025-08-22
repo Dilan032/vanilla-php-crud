@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'db_connection.php';
+require '../db_connection.php';
 
 if (isset($_POST['save_student'])) {
     // Get form data
@@ -16,15 +16,16 @@ if (isset($_POST['save_student'])) {
     if ($stmt->execute()) {
         $_SESSION['message'] = "Student created successfully";
         $_SESSION['msg_type'] = "success";
-        header("Location: student_create.php?status=success");
+        header("Location: ../pages/student-create.php?status=success");
     } else {
         $_SESSION['message'] = "Student not created";
         $_SESSION['msg_type'] = "danger";
-        header("Location: index.php?status=error");
+        header("Location: ../index.php?status=error");
     }
-
     $stmt->close();
+
 } else {
-    header("Location: student_create.php?status=error");
+    header("Location: ../pages/student-create.php?status=error");
 }
+
 ?>

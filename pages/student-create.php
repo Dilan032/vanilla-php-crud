@@ -15,18 +15,18 @@
     <div class="container">
 
     <!-- Include message file -->
-    <?php include('message.php'); ?>
+    <?php include('../asset/message.php'); ?>
 
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
                         <h4>Student add
-                            <a href="index.php" class="btn btn-danger float-end">Back</a>
+                            <a href="javascript:history.back()" class="btn btn-danger float-end">Back</a>
                         </h4>
                     </div>
                     <div class="card-body">
-                        <form action="code.php" method="post">
+                        <form action="../controllers/s-create-controller.php" method="post">
                           <div class="mb-3">
                             <label for="name">Student Name</label>
                             <input type="text" name="name" class="form-control" required>
