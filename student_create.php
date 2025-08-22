@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,6 +13,10 @@
   <body>
     <h1 class="text-center mt-5 mb-5">vanilla-php-crud</h1>
     <div class="container">
+
+    <!-- Include message file -->
+    <?php include('message.php'); ?>
+
         <div class="row">
             <div class="col-md-12">
                 <div class="card">

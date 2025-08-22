@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'db_connection.php';
 
 if (isset($_POST['save_student'])) {
@@ -13,8 +14,12 @@ if (isset($_POST['save_student'])) {
     $stmt->bind_param("ssis", $name, $email, $phoneNumber, $course);
 
     if ($stmt->execute()) {
-        header("Location: index.php?status=success");
+        $_SESSION['message'] = "Student created successfully";
+        $_SESSION['msg_type'] = "success";
+        header("Location: student_create.php?status=success");
     } else {
+        $_SESSION['message'] = "Student not created";
+        $_SESSION['msg_type'] = "danger";
         header("Location: index.php?status=error");
     }
 
