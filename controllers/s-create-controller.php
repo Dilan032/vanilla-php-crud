@@ -20,7 +20,7 @@ if (isset($_POST['save_student'])) {
     } else {
         $_SESSION['message'] = "Student not created";
         $_SESSION['msg_type'] = "danger";
-        header("Location: ../index.php?status=error");
+        header("Location: ../pages/student-create.php?status=error");
     }
     $stmt->close();
 

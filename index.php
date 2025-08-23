@@ -1,4 +1,5 @@
 <?php
+  session_start();
   require 'db_connection.php';
 ?>
 
@@ -13,6 +14,10 @@
   <body>
     <h1 class="text-center mt-5 mb-5">vanilla-php-crud</h1>
     <div class="container">
+
+        <!-- Include message file -->
+        <?php include('./asset/message.php'); ?>
+
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
@@ -49,7 +54,7 @@
                                         <td><?= $student['course']; ?></td>
                                         <td>
                                           <div class="d-flex justify-content-center gap-2">
-                                            <a href="" class="btn btn-info btn-sm px-3">View</a>
+                                            <a href="./pages/student-view.php?id=<?= $student['id']; ?>" class="btn btn-info btn-sm px-3">View</a>
                                             <a href="./pages/student-edit.php?id=<?= $student['id']; ?>" class="btn btn-success btn-sm px-3">Edit</a>
                                             <a href="" class="btn btn-danger btn-sm">Delete</a>
                                           </div>

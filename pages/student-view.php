@@ -1,5 +1,4 @@
 <?php
-  session_start();
   require '../db_connection.php';
 ?>
 
@@ -19,7 +18,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Student edit
+                        <h4>Student view details
                             <a href="javascript:history.back()" class="btn btn-danger float-end">Back</a>
                         </h4>
                     </div>
@@ -35,36 +34,30 @@
                                     $student = mysqli_fetch_array($query_run);
                                     // echo "<h4>Student id: $student_id</h4>";
                                     ?>
+                                        <label for="name">Name</label>
+                                        <p class="form-control">
+                                            <?= $student['name']; ?>
+                                        </p>
 
-                                    <form action="../controllers/s-edit-controller.php" method="post">
+                                        <label for="name">Email</label>
+                                        <p class="form-control">
+                                            <?= $student['email']; ?>
+                                        </p>
 
-                                        <input type="hidden" name="student_id" value="<?=$student['id']; ?>">
+                                        <label for="name">Mobile Number</label>
+                                        <p class="form-control">
+                                            <?= $student['phoneNumber']; ?>
+                                        </p>
 
-                                        <div class="mb-3">
-                                            <label for="name">Student Name</label>
-                                            <input type="text" name="name" value="<?=$student['name']; ?>" class="form-control" required>
-                                        </div>  
-                                        <div class="mb-3">
-                                            <label for="email">Student email</label>
-                                            <input type="email" name="email" value="<?=$student['email']; ?>" class="form-control" required>
-                                        </div>  
-                                        <div class="mb-3">
-                                            <label for="phoneNumber">Student phone Number</label>
-                                            <input type="tel" name="phoneNumber" value="<?=$student['phoneNumber']; ?>" maxlength="10" class="form-control" required>
-                                        </div>  
-                                        <div class="mb-3">
-                                            <label for="course">Student course</label>
-                                            <input type="text" name="course" value="<?=$student['course']; ?>" class="form-control" required>
-                                        </div>  
-                                        <div class="mb-3">
-                                            <button type="submit" name="update_student" class="btn btn-primary">update Student</button>
-                                        </div>  
-                                        </form>
+                                        <label for="name">course</label>
+                                        <p class="form-control">
+                                            <?= $student['course']; ?>
+                                        </p>
 
                                     <?php
                                 }
                             } else {
-                                echo "<h4>No id found</h4>";
+                                echo "<h4>No user details found</h4>";
                             }
                                     
                         ?>
