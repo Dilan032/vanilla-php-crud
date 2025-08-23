@@ -56,7 +56,11 @@
                                           <div class="d-flex justify-content-center gap-2">
                                             <a href="./pages/student-view.php?id=<?= $student['id']; ?>" class="btn btn-info btn-sm px-3">View</a>
                                             <a href="./pages/student-edit.php?id=<?= $student['id']; ?>" class="btn btn-success btn-sm px-3">Edit</a>
-                                            <a href="" class="btn btn-danger btn-sm">Delete</a>
+
+                                            <form action="./controllers/s-delete-controller.php" method="post">
+                                              <button type="submit" name="student-delete" value="<?= $student['id']; ?>" class="btn btn-danger btn-sm">Delete</button>
+                                            </form>
+
                                           </div>
                                         </td>
                                       </tr>
